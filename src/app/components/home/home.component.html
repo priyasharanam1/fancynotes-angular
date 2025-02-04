@@ -1,1 +1,23 @@
-<p>home works!</p>
+<div class="mt-5">
+    <h2>JotIt 🖊️</h2>
+    <button routerLink="create">Create a new note</button>
+    @if(note.length > 0){
+    <div class="row main mt-5">
+        <div *ngfor="let note of note" class="card h-100" [style]="getBgColor(note.color)" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Title : {{note.title}}</h5>
+                <p class="card-text">Description : {{note.content}}</p>
+                <p class="card-text">Created On : {{note.date}}</p>
+                <button class="card-link" [routerLink]="'edit/' + note.id">Edit</button>
+                <a (click)="deleteNote(note.id)" class="card-link">
+                    <button>Delete</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    }@else{
+    <div class="alert alert-secondary mt-5 fs-4" role="alert">
+        You don't have any notes yet. Please create a new note.
+    </div>
+    }
+</div>
