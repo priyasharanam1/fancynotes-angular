@@ -6,3 +6,18 @@
     font-size: 22px;
     margin-left: 16px;
 }
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  
+  .form-error {
+    color: red;
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  
