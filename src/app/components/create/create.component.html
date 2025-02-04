@@ -1,1 +1,13 @@
-<p>create works!</p>
+<div>
+    <h2 class="handlee-regular createForm">Create a New Note</h2>
+    <form (ngSubmit)="createNew()" class="mb-3 createForm">
+        <label for="title">Title : </label>
+        <input type="text" id="title" class="input-group mb-3" [(ngModel)]="newNote.title" name="title" required>
+        <label for="description">Description : </label>
+        <textarea id="description" class="input-group mb-3" [(ngModel)]="newNote.description" name="description" required></textarea>
+        <label for="color">Colour : </label>
+        <input type="text" id="color" class="input-group mb-3" [(ngModel)]="newNote.color" name="color" required>
+        <button type="submit">Create</button>
+        <button (click)="goBack()">Back</button>
+    </form>
+</div>

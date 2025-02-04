@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=Lato:wght@300;400;700&display=swap');
+
+body{
+    font-family: "Lato", serif;
+    background-color: black;
+    color: white;
+    margin: 40px 150px;
+    font-size: 24px;
+}
+
+.handlee-regular {
+    font-family: "Handlee", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+button{
+    background-color: rgb(245,197,24);
+    color: black;
+    border: none;
+    border-radius: 5px;
+}

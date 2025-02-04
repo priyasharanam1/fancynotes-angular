@@ -13,7 +13,7 @@ import { AppComponent } from "../../app.component";
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, RouterLink],
+  imports: [CommonModule, RouterModule, RouterLink, AppComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

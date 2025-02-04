@@ -6,7 +6,7 @@ import { CreateComponent } from './components/create/create.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HomeComponent, EditComponent, CreateComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
