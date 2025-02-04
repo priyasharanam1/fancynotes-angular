@@ -22,11 +22,11 @@ export class EditComponent {
     ) {}
     ngOnInit(): void {
       this.activatedRoute.params.subscribe((params) => {
-        this.noteId = +params['id']; // Convert to number
+        this.noteId = +params['id'];
         this.note = this.noteService.get(this.noteId);
         if (!this.note) {
           alert('Note not found!');
-          this.router.navigate(['']); // Redirect to home
+          this.router.navigate(['']);
         }
       });
     }

@@ -1,36 +1,26 @@
 <div>
     <h2 class="handlee-regular createForm">Create a New Note</h2>
     <form #noteForm="ngForm" (ngSubmit)="createNew()" class="mb-3 createForm">
-      <!-- Title Field -->
-      <label for="title">Title:</label>
-      <input type="text" id="title" class="input-group mb-3" [(ngModel)]="newNote.title" name="title" required #title="ngModel" />
-      <div *ngIf="title.invalid && title.touched" class="error">Title is required.</div>
-  
-      <!-- Description Field -->
-      <label for="description">Description:</label>
-      <textarea
-        id="description"
-        class="input-group mb-3"
-        [(ngModel)]="newNote.description"
-        name="description"
-        required
-        #description="ngModel"
-      ></textarea>
-      <div *ngIf="description.invalid && description.touched" class="error">Description is required.</div>
-  
-      <!-- Colour Field -->
-      <label for="color">Colour:</label>
-      <input type="text" id="color" class="input-group mb-3" [(ngModel)]="newNote.color" name="color" required #color="ngModel" />
-      <div *ngIf="color.invalid && color.touched" class="error">Colour is required.</div>
-  
-      <!-- Form-Level Error Message -->
-      <div *ngIf="noteForm.invalid && noteForm.submitted" class="form-error">
-        Please fill out all required fields before submitting.
-      </div>
-  
-      <!-- Buttons -->
-      <button type="submit">Create</button>
-      <button type="button" (click)="goBack()">Back</button>
+        <label for="title">Title:</label>
+        <input type="text" id="title" class="input-group mb-3" [(ngModel)]="newNote.title" name="title" required
+            #title="ngModel" />
+        <div *ngIf="title.invalid && title.touched" class="error">Title is required.</div>
+
+        <label for="description">Description:</label>
+        <textarea id="description" class="input-group mb-3" [(ngModel)]="newNote.description" name="description"
+            required #description="ngModel"></textarea>
+        <div *ngIf="description.invalid && description.touched" class="error">Description is required.</div>
+
+        <label for="color">Colour:</label>
+        <input type="text" id="color" class="input-group mb-3" [(ngModel)]="newNote.color" name="color" required
+            #color="ngModel" />
+        <div *ngIf="color.invalid && color.touched" class="error">Colour is required.</div>
+
+        <div *ngIf="noteForm.invalid && noteForm.submitted" class="form-error">
+            Please fill out all required fields before submitting.
+        </div>
+
+        <button type="submit">Create</button>
+        <button type="button" (click)="goBack()">Back</button>
     </form>
-  </div>
-  
+</div>

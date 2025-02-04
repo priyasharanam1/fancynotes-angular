@@ -41,6 +41,7 @@ export class CreateComponent {
         date: new Date(),
         color: ''
       }
+      this.router.navigate([''])
     }
 
     goBack(): void {
